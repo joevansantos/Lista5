@@ -1,39 +1,37 @@
+
 #include <stdio.h>
 
-int i,j;
-float vet[10],*p;
+float vet[];
+int i,num,j,*p;
 
 
-void ler()
+void iniciar()
 {
-  for (i=0;i < 10;i++)
-  {
-    printf("Digite um numero:");
-    scanf("%f",&vet[i]);
-
-  }
+  printf("Digite quantos numeros tera o vetor:");
+  scanf("%d",&num);
 
 }
 
 
-void imprime()
+void ler()
 {
-  for (j=0;j < 10;j++)
+  for (i=0;i < num;i++)
   {
-    p = &vet[j];
-    printf("\n%d",p);
-
-
+    printf("Digite um numero:");
+    scanf("%f",&vet[i]);
+    p = &vet[i];
+    printf("posicao:%d",p);
+    printf("\n");
   }
+
 }
 
 
 int main()
 
 {
-
+   iniciar();
    ler();
-   imprime();
    return 0;
 
 }
